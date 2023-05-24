@@ -24,7 +24,8 @@
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
-	gfx( wnd )
+	gfx( wnd ),
+	ball(Vec2(100, 100), Vec2(100, 100))
 {
 }
 
@@ -38,8 +39,11 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	const float dt = ft.Mark();
+	ball.Update(dt);
 }
 
 void Game::ComposeFrame()
 {
+	ball.Draw(gfx);	
 }
