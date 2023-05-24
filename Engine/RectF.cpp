@@ -19,3 +19,15 @@ Rect::Rect(const Vec2& topleft, float bottom, float right)
 {
 	Rect(topleft, Vec2(right, bottom));
 }
+
+bool Rect::IsOverlappingWith(const Rect& other) const
+{
+	return (right >= other.left && left <= other.right && top <= other.bottom && bottom >= other.top);
+}
+
+Rect Rect::FromCenter(const Vec2& center, float halfWidth, float halfHeight)
+{
+	const Vec2 half(halfWidth, halfHeight);
+	return Rect(center - half, center + half);
+}
+
