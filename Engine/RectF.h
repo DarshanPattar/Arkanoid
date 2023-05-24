@@ -8,8 +8,7 @@ public:
 	Rect( float left_in, float top_in, float right_in, float bottom_in);
 	Rect(const Vec2& topleft, const Vec2& bottomright);
 	Rect(const Vec2& topleft, float bottom, float right);
-
-private:
+public:
 	float top;
 	float left;
 	float bottom;
