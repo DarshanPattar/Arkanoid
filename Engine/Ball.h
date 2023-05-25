@@ -17,6 +17,7 @@ public:
 
 	Rect GetRect();
 	inline Vec2 GetVelocity() { return vel; }
+	inline Vec2 GetPosition() { return pos; }
 
 private:
 	static constexpr float radius = 7.0f;
