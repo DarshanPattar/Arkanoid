@@ -49,13 +49,22 @@ private:
 	/********************************/
 	/*  User Variables              */
 	/********************************/
+
+	static constexpr float brickWidth = 50.f;
+	static constexpr float brickHeight = 20.f;
+	static constexpr int nBricksAcross = 12;
+	static constexpr int nBricksDown = 5;
+	static constexpr int nBricks = nBricksAcross * nBricksDown;
+
+	static constexpr int space = 2;
+
 	FrameTimer ft;
 	Ball ball;
 
 	Rect walls;
 	Sound Soundpad;
 
-	Brick B;
+	Brick bricks[nBricks];
 	Sound SoundBrick;
 
 	Paddle paddle;
