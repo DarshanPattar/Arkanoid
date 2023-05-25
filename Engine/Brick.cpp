@@ -11,8 +11,9 @@ Brick::Brick(const Rect& rect_in, Color c_in)
 
 void Brick::Draw(Graphics& gfx) const
 {
-	if(!isDestroyed)
-		gfx.DrawRect(rect, c);
+	if (!isDestroyed) {
+		gfx.DrawRect(rect.GetExplanded(padding), c);
+	}
 }
 
 bool Brick::DoBallCollision(Ball& ball)

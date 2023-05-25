@@ -13,6 +13,7 @@ public:
 
 	static Rect FromCenter(const Vec2& center, float halfWidth, float halfHeight);
 
+	Rect GetExplanded(float offset) const;
 public:
 	float top;
 	float left;

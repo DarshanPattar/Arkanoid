@@ -35,3 +35,8 @@ Rect Rect::FromCenter(const Vec2& center, float halfWidth, float halfHeight)
 	return res;
 }
 
+Rect Rect::GetExplanded(float offset) const
+{
+	return Rect(left - offset, top - offset, right + offset, bottom + offset);
+}
+
