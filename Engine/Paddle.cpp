@@ -22,8 +22,10 @@ bool Paddle::DoBallCollsion(Ball& ball) const
 {
 	Rect res = GetRect();
 	if (res.IsOverlappingWith(ball.GetRect())) {
-		ball.ReBoundY();
-		return true;
+		if (ball.GetVelocity().y > 0) {
+			ball.ReBoundY();
+			return true;
+		}
 	}
 	return false;
 }

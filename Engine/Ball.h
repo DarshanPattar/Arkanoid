@@ -16,6 +16,7 @@ public:
 	bool DoWallCollision(const Rect& walls);
 
 	Rect GetRect();
+	inline Vec2 GetVelocity() { return vel; }
 
 private:
 	static constexpr float radius = 7.0f;
