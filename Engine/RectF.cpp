@@ -29,8 +29,9 @@ Rect Rect::FromCenter(const Vec2& center, float halfWidth, float halfHeight)
 {
 	//const Vec2 half(halfWidth, halfHeight);
 	//return Rect(center - half, center + half);
-	Vec2 other = center;
-
-	return Rect(Vec2(center.x - halfWidth, center.y - halfHeight), Vec2(other.x + halfWidth, other.y + halfHeight));
+	Vec2 topleft = Vec2(center.x - halfWidth, center.y - halfHeight);
+	Vec2 bottomright = Vec2(center.x + halfWidth, center.y + halfHeight);
+	Rect res(topleft.x, topleft.y, bottomright.x, bottomright.y);
+	return res;
 }
 

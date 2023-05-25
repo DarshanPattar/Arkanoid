@@ -41,7 +41,6 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
-	
 	const float dt = ft.Mark();
 	ball.Update(dt);
 	if (ball.DoWallCollision(walls)) {
@@ -52,5 +51,5 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
-	ball.Draw(gfx);	
+	ball.Draw(gfx);
 }

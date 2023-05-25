@@ -60,7 +60,8 @@ bool Ball::DoWallCollision(const Rect& walls)
 
 Rect Ball::GetRect()
 {
-	return Rect::FromCenter(pos, radius, radius);
+	Rect res = Rect::FromCenter(pos, radius, radius);
+	return res;
 }
 
 

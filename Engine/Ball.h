@@ -3,6 +3,7 @@
 #include "Vec2.h"
 #include "Graphics.h"
 
+
 class Ball {
 public:
 	Ball(const Vec2& pos_in, const Vec2& vel_in);

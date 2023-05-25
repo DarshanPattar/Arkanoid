@@ -27,6 +27,7 @@
 #include "Ball.h"
 #include "RectF.h"
 #include "Sound.h"
+#include "Brick.h"
 
 class Game
 {
