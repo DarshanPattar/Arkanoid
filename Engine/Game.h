@@ -53,4 +53,7 @@ private:
 
 	Rect walls;
 	Sound Soundpad;
+
+	Brick B;
+	Sound SoundBrick;
 };
