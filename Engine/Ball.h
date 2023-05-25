@@ -14,6 +14,8 @@ public:
 	void ReBoundY();
 	bool DoWallCollision(const Rect& walls);
 
+	Rect GetRect();
+
 private:
 	static constexpr float radius = 7.0f;
 	Vec2 pos;
